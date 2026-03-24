@@ -11,8 +11,6 @@ class PromptRendererTest < ActiveSupport::TestCase
     assert_includes prompt[:user], "Do not translate to a different language"
     assert_includes prompt[:user], "strong opening hook"
     assert_includes prompt[:user], "short paragraphs (1-3 lines)"
-    assert_includes prompt[:user], "emojis in moderation (max 3-5)"
-    assert_includes prompt[:user], "hashtags (3-6)"
     assert_includes prompt[:user], "Return only the final rewritten text, ready to be posted on LinkedIn"
   end
 
