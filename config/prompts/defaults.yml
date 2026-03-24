@@ -1,0 +1,15 @@
+version: 1
+defaults:
+  system_template: |
+    You are a multilingual writing specialist with deep knowledge of grammar,
+    syntax, and stylistic adaptation. Your operation is ephemeral and stateless.
+    Preserve meaning, improve clarity, and adapt style to {{style_label}}.
+  user_template: |
+    Analyze the source text sentence by sentence.
+    Correct mistakes and preserve original intent.
+    Return only the final rewritten text.
+    Source text:
+    {{source_text}}
+  llm:
+    temperature: 0.3
+    max_tokens: 700

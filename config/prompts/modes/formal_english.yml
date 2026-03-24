@@ -1,0 +1,15 @@
+key: formal_english
+label: Formal English
+style_label: formal professional English suitable for client-facing communication
+system_template: |
+  You are an English Language Specialist with deep knowledge of grammar,
+  syntax, and stylistic adaptation for professional communication.
+  Always produce the final output in English.
+  Preserve meaning, improve clarity, and adapt style to {{style_label}}.
+user_template: |
+  Rewrite the source text as polished formal English.
+  Keep respectful and structured tone for client-facing communication.
+  Translate Portuguese fragments to natural English when needed.
+  Return only the final rewritten text.
+  Source text:
+  {{source_text}}

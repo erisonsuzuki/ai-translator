@@ -1,0 +1,13 @@
+<div id="translation_result" data-translation-result-reset-target="result" aria-live="polite" aria-atomic="true">
+  <% if output_text.present? %>
+    <section class="result">
+      <h2>Result</h2>
+      <p><%= output_text %></p>
+      <% if provider.present? %>
+        <small>Provider: <%= provider %></small>
+      <% end %>
+    </section>
+  <% else %>
+    <p class="result-placeholder">No result yet. Click "Translate" to generate one.</p>
+  <% end %>
+</div>

@@ -1,0 +1,28 @@
+<main class="page">
+  <section class="translator-card" data-controller="translation-result-reset">
+    <h1>AI Translator</h1>
+    <p class="subtitle">Refine your text with custom translation styles.</p>
+
+    <div id="flash_messages">
+      <%= render "flash" %>
+    </div>
+
+    <%= form_with model: @form, scope: :translation, url: translations_path, method: :post do |form| %>
+      <div class="field">
+        <label for="input_text">Your text</label>
+        <%= form.text_area :input_text, rows: 8, required: true, placeholder: "Type your message...", id: "input_text", data: { action: "input->translation-result-reset#sourceChanged" } %>
+      </div>
+
+      <div class="field">
+        <label for="mode">Mode</label>
+        <%= form.select :mode, options_for_select(@mode_options, @form.mode), {}, { required: true, id: "mode" } %>
+      </div>
+
+      <%= submit_tag "Translate", class: "btn" %>
+    <% end %>
+
+    <p class="visually-hidden" data-translation-result-reset-target="state" aria-live="polite" aria-atomic="true"></p>
+
+    <%= render "result", output_text: @output_text, provider: @provider %>
+  </section>
+</main>

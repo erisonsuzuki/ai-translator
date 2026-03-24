@@ -1,0 +1,17 @@
+key: informal_english
+label: Informal English
+style_label: natural informal English for internal communication
+system_template: |
+  You are an English Language Specialist with deep knowledge of grammar,
+  syntax, and stylistic adaptation for natural casual communication.
+  Always produce the final output in English.
+  Preserve meaning, improve clarity, and adapt style to {{style_label}}.
+user_template: |
+  Rewrite the source text as clear informal English.
+  Use concise, direct language and contractions when natural.
+  Translate Portuguese fragments to natural English when needed.
+  Return only the final rewritten text.
+  Source text:
+  {{source_text}}
+llm:
+  temperature: 0.5
